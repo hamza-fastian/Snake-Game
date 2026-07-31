@@ -40,7 +40,8 @@ The game includes smooth movement, difficulty levels, scoring system, bonus food
 - Bonus Food:  +5 Point
 
 ## 📸 Screenshots
-<img width="308" height="299" alt="image" src="https://github.com/user-attachments/assets/895d91c4-482a-46d5-a2a9-f61b4a8d6396" />
+
+<img width="316" height="310" alt="image" src="https://github.com/user-attachments/assets/408415ec-060c-47ea-be25-d94311980ab4" />
 <img width="308" height="299" alt="image" src="https://github.com/user-attachments/assets/8a628510-186a-4992-8f9d-044395126d35" />
 <img width="350" height="600" alt="image" src="https://github.com/user-attachments/assets/8f71ac0a-1cc0-4dbb-988e-7f0f7e8b1d45" />
 <img width="350" height="600" alt="image" src="https://github.com/user-attachments/assets/9fd3b015-5d23-4bff-bbac-6907096c4d99" />
