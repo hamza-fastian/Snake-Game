@@ -46,11 +46,12 @@ void welcomeScreen()
     cout << "  S or s : Move Down" << endl;
     cout << "  A or a : Move Left" << endl;
     cout << "  D or d : Move Right" << endl;
+    cout << "  P or p : Pause / Resume" << endl;
 
     setColor(13);
     cout << "\n  Eat food (*) and grow your snake!" << endl;
     cout << "  Don't hit walls or yourself." << endl;
-    cout << "  Press P to Resume / Pause. \n\n";
+    cout << "  Eat bonus ($) for extra points.\n\n";
 
     setColor(11);
     cout << "  Press ENTER to start your adventure...";
