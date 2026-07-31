@@ -236,7 +236,7 @@ int main()
 
     setColor(5);
     cout << "  =================================\n";
-    cout << "       SELECT DIFFICUTLY LEVEL\n";
+    cout << "       SELECT DIFFICULTY LEVEL\n";
     cout << "  =================================\n\n";
     setColor(7);
 
