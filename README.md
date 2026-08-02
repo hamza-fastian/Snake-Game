@@ -46,3 +46,4 @@ The game includes smooth movement, difficulty levels, scoring system, bonus food
 <img width="350" height="600" alt="image" src="https://github.com/user-attachments/assets/8f71ac0a-1cc0-4dbb-988e-7f0f7e8b1d45" />
 <img width="350" height="600" alt="image" src="https://github.com/user-attachments/assets/9fd3b015-5d23-4bff-bbac-6907096c4d99" />
 <img width="308" height="299" alt="image" src="https://github.com/user-attachments/assets/17ec50d2-c684-440c-9aaf-cc13cc339a92" />
+<img width="301" height="164" alt="image" src="https://github.com/user-attachments/assets/febbcd98-e79f-4048-ae1c-da5e114c25f4" />
