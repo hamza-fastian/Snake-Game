@@ -23,6 +23,33 @@ int snakeX[100];
 int snakeY[100];
 int snakeLength = 1;
 
+void setConsoleSize(int cols, int rows)
+{
+    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    SMALL_RECT minRect = { 0, 0, 1, 1 };
+    SetConsoleWindowInfo(hOut, TRUE, &minRect);
+    COORD bufferSize = { (SHORT)cols, (SHORT)rows };
+    SetConsoleScreenBufferSize(hOut, bufferSize);
+    SMALL_RECT windowRect = { 0, 0, (SHORT)(cols - 1), (SHORT)(rows - 1) };
+    SetConsoleWindowInfo(hOut, TRUE, &windowRect);
+}
+
+void setConsoleFont(int fontWidth, int fontHeight)
+{
+    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    CONSOLE_FONT_INFOEX cfi;
+    cfi.cbSize = sizeof(cfi);
+    cfi.nFont = 0;
+    cfi.dwFontSize.X = fontWidth;
+    cfi.dwFontSize.Y = fontHeight;
+    cfi.FontFamily = FF_DONTCARE;
+    cfi.FontWeight = FW_NORMAL;
+    wcscpy_s(cfi.FaceName, L"Consolas");
+
+    SetCurrentConsoleFontEx(hOut, FALSE, &cfi);
+}
+
 void setColor(int color)
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
@@ -202,9 +229,26 @@ class Food {
 public:
     void generateFood()
     {
-        FoodX = rand() % (width - 2) + 2;
-        FoodY = rand() % (length - 2) + 2;
-    }
+        while (true)
+        {
+            FoodX = rand() % (width - 2) + 2;
+            FoodY = rand() % (length - 2) + 2;
+
+            bool onSnake = false;
+
+            for (int i = 0; i < snakeLength; i++)
+            {
+                if (snakeX[i] == FoodX && snakeY[i] == FoodY)
+                {
+                    onSnake = true;
+                    break;
+                }
+            }
+
+            if (!onSnake)
+                break;
+        }
+    }  
 };
 
 class Score {
@@ -231,7 +275,10 @@ public:
 
 int main()
 {
+    setConsoleFont(10, 18);
+    setConsoleSize(50, 32);
     welcomeScreen();
+
     int choice;
 
     setColor(5);
@@ -243,7 +290,7 @@ int main()
     cout << "\n  1. Easy\n  2. Medium\n  3. Hard\n";
 
     setColor(13);
-    cout << "\n  Invalid input will start the game in Medium mode!" << endl;
+    cout << "\n  Note: Invalid input defaults to Medium." << endl;
 
     setColor(11);
     cout << "\n  Enter your choice: ";
@@ -252,13 +299,13 @@ int main()
     system("cls");
 
     if (choice == 1)
-        speed = 100;
+        speed = 120;
     else if (choice == 2)
-        speed = 70;
+        speed = 80;
     else if (choice == 3)
-        speed = 40;
+        speed = 50;
     else
-        speed = 70;
+        speed = 80;
 
     Game g;
     Snake s;
@@ -324,15 +371,16 @@ int main()
     system("cls");
 
     setColor(12);
-    cout << "\n============================\n";
-    cout << "        GAME OVER!\n";
-    cout << "============================\n\n";
+    cout << "\n     ============================\n";
+    cout << "               GAME OVER!\n";
+    cout << "     ============================\n\n";
 
     setColor(14);
-    cout << "Final Score: " << score << endl;
+    cout << "       Final Score: " << score << endl;
 
+    setColor(11);
+    cout << "\n   Thanks for playing Snake Adventure!\n";
     setColor(7);
-    cout << "\nThanks for playing Snake Adventure!\n";
 
     system("pause");
     return 0;
