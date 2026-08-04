@@ -50,7 +50,7 @@ The game includes smooth movement, difficulty levels, scoring system, bonus food
 
 ## 👨‍💻 Author
 
-# Muhammad Hamza Shahid
+<t> Muhammad Hamza Shahid </t>
 🎓 AI Student at FAST National University of Computer and Emerging Sciences (FAST-NUCES)
 
 💻 Passionate about C++, Python, Artificial Intelligence, and Game Development.
