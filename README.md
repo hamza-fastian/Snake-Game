@@ -46,3 +46,11 @@ The game includes smooth movement, difficulty levels, scoring system, bonus food
 <img width="350" height="600" alt="image" src="https://github.com/user-attachments/assets/8f71ac0a-1cc0-4dbb-988e-7f0f7e8b1d45" />
 <img width="350" height="600" alt="image" src="https://github.com/user-attachments/assets/9fd3b015-5d23-4bff-bbac-6907096c4d99" />
 <img width="301" height="164" alt="image" src="https://github.com/user-attachments/assets/e861308e-26da-4d09-8197-0080fd212db0" />
+
+👨‍💻 Author
+
+## Muhammad Hamza Shahid
+🎓 AI Student at FAST National University of Computer and Emerging Sciences (FAST-NUCES)
+💻 Passionate about C++, Python, Artificial Intelligence, and Game Development.
+
+Developed with ❤️ as a learning project to practice C++ programming and console game development.
