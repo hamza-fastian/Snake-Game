@@ -52,6 +52,7 @@ The game includes smooth movement, difficulty levels, scoring system, bonus food
 
 # Muhammad Hamza Shahid
 🎓 AI Student at FAST National University of Computer and Emerging Sciences (FAST-NUCES)
+
 💻 Passionate about C++, Python, Artificial Intelligence, and Game Development.
 
-Developed with ❤️ as a learning project to practice C++ programming and console game development.
+  Developed with ❤️ as a learning project to practice C++ programming and console game development.
